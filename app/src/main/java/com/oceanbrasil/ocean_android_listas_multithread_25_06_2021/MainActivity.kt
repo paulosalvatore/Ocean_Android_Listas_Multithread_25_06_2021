@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         rvLista.layoutManager = LinearLayoutManager(this)
 
-        val harryPotter = Filme("Harry Potter", "")
-        val senhorDosAneis = Filme("Senhor dos Anéis", "")
-        val rambo = Filme("Rambo", "")
+        val harryPotter = Filme("Harry Potter", "https://static.wikia.nocookie.net/harrypotter/images/9/9c/Capa_Harry_Potter_e_a_Pedra_Filosofal_%28filme%29.jpg/revision/latest?cb=20130101153136&path-prefix=pt-br")
+        val senhorDosAneis = Filme("Senhor dos Anéis", "https://upload.wikimedia.org/wikipedia/pt/3/38/Lord_of_the_Rings_Fellowship_of_the_Ring.jpg")
+        val rambo = Filme("Rambo", "https://midia.gruposinos.com.br/_midias/png/2017/10/27/rambo-3241333.png")
 
         val items = listOf(harryPotter, senhorDosAneis, rambo)
 

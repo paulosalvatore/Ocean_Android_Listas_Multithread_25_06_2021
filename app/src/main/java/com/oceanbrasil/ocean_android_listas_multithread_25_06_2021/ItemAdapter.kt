@@ -5,7 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 data class Filme(
     val nome: String,
@@ -20,7 +22,15 @@ class ItemAdapter(
             val ivImagem = itemView.findViewById<ImageView>(R.id.ivImagem)
             val tvNome = itemView.findViewById<TextView>(R.id.tvNome)
 
+            val capaPadrao = ResourcesCompat.getDrawable(itemView.resources, R.drawable.capa_padrao, null)
+
+            ivImagem.setImageDrawable(capaPadrao)
+
+            Glide.with(itemView).load(item.imagemUrl).into(ivImagem)
+
             tvNome.text = item.nome
+
+            // Desafio: Criação da Pokedex usando RecyclerView, Retrofit e Glide
         }
     }
 
