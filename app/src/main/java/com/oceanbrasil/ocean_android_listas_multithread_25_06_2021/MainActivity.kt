@@ -23,5 +23,13 @@ class MainActivity : AppCompatActivity() {
         val rvLista = findViewById<RecyclerView>(R.id.rvLista)
 
         rvLista.layoutManager = LinearLayoutManager(this)
+
+        val harryPotter = Filme("Harry Potter", "")
+        val senhorDosAneis = Filme("Senhor dos Anéis", "")
+        val rambo = Filme("Rambo", "")
+
+        val items = listOf(harryPotter, senhorDosAneis, rambo)
+
+        rvLista.adapter = ItemAdapter(items)
     }
 }
